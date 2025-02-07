@@ -15,7 +15,7 @@ public class Main {
         long startTime = System.nanoTime();
 
         //Linear search of data object using unique id
-        Optional<Data> resultantData = compareLinearAndBinarySearch
+        Optional<CompareLinearAndBinarySearch.Data> resultantData = compareLinearAndBinarySearch
                 .getDataByLinearSearch(5_00_000L);
 
         //end time to check performance
@@ -32,7 +32,7 @@ public class Main {
         startTime = System.nanoTime();
 
         //Binary search of data object using unique id
-        Data resultantData2 = compareLinearAndBinarySearch
+        CompareLinearAndBinarySearch.Data resultantData2 = compareLinearAndBinarySearch
                 .getDataByBinarySearch(5_00_000L).orElse(null);
 
         //end time to check performance

@@ -19,7 +19,10 @@ public class CompareLinearAndBinarySearch {
         }
     }
     //Get Data By Linear Search
-    Optional<Data> getDataByLinearSearch(Long id){
+    public Optional<Data> getDataByLinearSearch(Long id) throws IllegalArgumentException{
+
+        if(id < 0) throw new IllegalArgumentException("Id is negative");
+
         for (Data datum : data) {
             if (datum.id.equals(id)) return Optional.of(datum);
         }
@@ -28,7 +31,9 @@ public class CompareLinearAndBinarySearch {
     }
 
     //Get Data By Binary Search
-    Optional<Data> getDataByBinarySearch(Long id){
+    public Optional<Data> getDataByBinarySearch(Long id) throws IllegalArgumentException{
+
+        if(id < 0 || id >= Integer.MAX_VALUE) throw new IllegalArgumentException("Id is not acceptable");
 
         int startIndex = 0;
         int endIndex = data.length-1;
@@ -42,20 +47,22 @@ public class CompareLinearAndBinarySearch {
 
         return Optional.empty();
     }
-}
 
-//Data class to mock real data
-class Data{
-    Long id;
-    String name;
 
-    Data(Long id, String name){
-        this.id = id;
-        this.name = name;
+    //Data class to mock real data
+    public static class Data{
+        public Long id;
+        public String name;
+
+        Data(Long id, String name){
+            this.id = id;
+            this.name = name;
+        }
+
+        @Override
+        public String toString(){
+            return "Id is : " + id + " , Name is : " + name;
+        }
     }
 
-    @Override
-    public String toString(){
-        return "Id is : " + id + " , Name is : " + name;
-    }
 }
