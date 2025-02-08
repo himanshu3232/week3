@@ -5,7 +5,7 @@ public class Data{
     public Long id;
     public String name;
 
-    Data(Long id, String name){
+    public Data(Long id, String name){
         this.id = id;
         this.name = name;
     }
