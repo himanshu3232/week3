@@ -1,4 +1,4 @@
-package org.example.problem_1;
+package org.capgemini.problem_1;
 
 import java.util.Arrays;
 import java.util.Optional;
@@ -15,7 +15,7 @@ public class Main {
         long startTime = System.nanoTime();
 
         //Linear search of data object using unique id
-        Optional<CompareLinearAndBinarySearch.Data> resultantData = compareLinearAndBinarySearch
+        Optional<Data> resultantData = compareLinearAndBinarySearch
                 .getDataByLinearSearch(5_00_000L);
 
         //end time to check performance
@@ -32,7 +32,7 @@ public class Main {
         startTime = System.nanoTime();
 
         //Binary search of data object using unique id
-        CompareLinearAndBinarySearch.Data resultantData2 = compareLinearAndBinarySearch
+        Data resultantData2 = compareLinearAndBinarySearch
                 .getDataByBinarySearch(5_00_000L).orElse(null);
 
         //end time to check performance

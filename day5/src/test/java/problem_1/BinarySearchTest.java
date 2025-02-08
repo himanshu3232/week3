@@ -1,6 +1,6 @@
 package problem_1;
 
-import org.example.problem_1.CompareLinearAndBinarySearch;
+import org.capgemini.problem_1.CompareLinearAndBinarySearch;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
